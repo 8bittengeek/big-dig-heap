@@ -117,8 +117,11 @@ API docs: `http://localhost:8000/docs`
 This provides a consistent dev environment using containers so you can:
 
 ✅ Run your backend API and crawler in isolated containers
+
 ✅ Optionally run a local Qortal node (blockchain + QDN)
+
 ✅ Preview your Q‑App frontend
+
 ✅ Spin everything up with one command
 
 ⚠️ Important Note on Qortal Core:
