@@ -85,7 +85,7 @@ BIG-DIG-HEAP consists of:
 
 🛠️ Quick Start
 
-* Clone the qortal repo
+<!-- * Clone the qortal repo
 
 ```
 git clone https://github.com/Qortal/qortal.git
@@ -95,7 +95,7 @@ cd qortal
 ```
 mvn clean package
 cd ..
-```
+``` -->
   * Clone the big-dig-heap repo  
 ```
 git clone https://github.com/8bittengeek/big-dig-heap.git
