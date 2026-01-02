@@ -85,21 +85,27 @@ BIG-DIG-HEAP consists of:
 
 🛠️ Quick Start
 
-  * Clone the repo  
+<!-- * Clone the qortal repo
+
+```
+git clone https://github.com/Qortal/qortal.git
+cd qortal
+```
+* Build the .jar with Maven
+```
+mvn clean package
+cd ..
+``` -->
+  * Clone the big-dig-heap repo  
 ```
 git clone https://github.com/8bittengeek/big-dig-heap.git
 cd big-dig-heap
-git submodule init
-git submodule update
 ```
-  * Build qortal core
+  <!-- * Get the Qortal core
 ```
-cd qortal 
-mvn clean package
-cd ..
-```
-* Build a local image
-
+cp ../qortal/target/qortal-5.0.6.jar ./
+``` -->
+  * Build a local image
 ```
 docker build -t qortal-bdh-image .
 ```
