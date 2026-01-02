@@ -1,11 +1,12 @@
-# Qortal build container)
-FROM openjdk:11-jre-slim
+# Qortal build container
+FROM eclipse-temurin:11-jre
+
 
 WORKDIR /qortal-bdh
 
 # Copy your built Qortal core jar + settings
 COPY qortal/target/qortal-5.0.6.jar /qortal-bdh/qortal.jar
-COPY qortal/testnet/settings-test.json /qortal-bdh/settings.json
+COPY qortal-testnet-settings.json /qortal-bdh/settings.json
 
-EXPOSE 1234  # API port
+# EXPOSE 62392  # API port
 CMD ["java", "-jar", "/qortal-bdh/qortal.jar", "settings.json"]

@@ -98,6 +98,11 @@ cd qortal
 mvn clean package
 cd ..
 ```
+* Build a local image
+
+```
+docker build -t qortal-bdh-image .
+```
   * Launch development environment
 ```
 docker compose up --build
@@ -106,7 +111,7 @@ docker compose up --build
   
 Backend API: `http://localhost:8000`
 
-Q-App UI: `http://localhost:8080`
+Q-App UI: `http://localhost:62391`
 
 API docs: `http://localhost:8000/docs`
 
