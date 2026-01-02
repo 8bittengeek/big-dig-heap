@@ -28,7 +28,7 @@ services:
     volumes:
       - qortal-data:/qortal/data
     ports:
-      - "4321:4321"
+      - "62391:62391"
     environment:
       - JAVA_OPTS=-Xmx512m
 
