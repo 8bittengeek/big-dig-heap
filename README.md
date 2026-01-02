@@ -130,15 +130,12 @@ Qortal Core doesn’t currently publish an official Docker image; it’s designe
 The composition below includes a placeholder qortal_node service that expects your own image (big-dig-heap‑image). You can replace it with your own custom build once available.
 
 
-
-
-
 ```
 📁 Project Structure
 /
 ├─ backend/        # FastAPI REST API
 ├─ crawler/        # Python snapshot & crawler logic
-├─ qortal/         # Bridge to Qortal publishing
+├─ qortal-bdh/     # Bridge to Qortal publishing
 ├─ qapp/           # Q-App frontend
 ├─ docker-compose.yml
 ├─ README```.md
