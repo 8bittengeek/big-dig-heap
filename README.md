@@ -87,7 +87,7 @@ BIG-DIG-HEAP consists of:
 
   * Clone the repo  
 ```
-git clone https://github.com/yourusername/big-dig-heap.git
+git clone https://github.com/8bittengeek/big-dig-heap.git
 cd big-dig-heap
 ```
   * Launch development environment
