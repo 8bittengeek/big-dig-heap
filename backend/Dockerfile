@@ -1,29 +1,20 @@
-# backend/Dockerfile
-FROM python:3.11-slim
+# Start from the official Playwright Python image
+FROM mcr.microsoft.com/playwright/python:v1.57.0-noble
 
 WORKDIR /app
 
-COPY backend/requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy only requirements file first 
+COPY backend/requirements.txt .
 
-COPY backend /app/backend
-COPY crawler /app/crawler
+# Install Python deps, including playwright
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    python -m playwright install
 
-RUN apt-get update && apt-get install -y \
-    libnss3 \
-    libatk-bridge2.0-0 \
-    libx11-xcb1 \
-    libasound2 \
-    libatk1.0-0 \
-    libcups2 \
-    libdrm2 \
-    libxcomposite1 \
-    libxdamage1 \
-    libxrandr2 \
-    libgbm1 \
-    && rm -rf /var/lib/apt/lists/*
+# Copy code after installing deps
+COPY backend/ backend/
+COPY crawler/ crawler/
 
-RUN pip install playwright
-RUN playwright install chromium
+EXPOSE 8000
 
 CMD ["uvicorn", "backend.api:app", "--host", "0.0.0.0", "--port", "8000"]
