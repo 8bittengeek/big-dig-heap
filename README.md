@@ -1,10 +1,10 @@
-🏗️ BIG-DIG-DEEP
+🏗️ BIG-WEB-ARCHIVE
 
-BIG-DIG-DEEP is a decentralized web archiving platform that enables users to capture, store, and retrieve high-fidelity snapshots of web content — powered by a Python backend and the Qortal decentralized network. Think archive.is meets decentralized storage: a resilient archive of web pages that lives on a peer-to-peer data network rather than centralized servers.
+BIG-WEB-ARCHIVE is a decentralized web archiving platform that enables users to capture, store, and retrieve high-fidelity snapshots of web content — powered by a Python backend and the Qortal decentralized network. Think archive.is meets decentralized storage: a resilient archive of web pages that lives on a peer-to-peer data network rather than centralized servers.
 
 🚀 Overview
 
-BIG-DIG-DEEP lets you:
+BIG-WEB-ARCHIVE lets you:
 
 📌 Submit live web URLs for archiving
 
@@ -20,7 +20,7 @@ BIG-DIG-DEEP lets you:
 
 🧠 Motivation
 
-The modern web is ephemeral. Pages disappear or change without notice, yet many contain content we want preserved. Traditional archival systems are centralized and depend on single entities. BIG-DIG-DEEP moves archiving into a decentralized realm, leveraging Qortal’s blockchain and distributed storage to make archives resilient, censorship-resistant, and verifiable.
+The modern web is ephemeral. Pages disappear or change without notice, yet many contain content we want preserved. Traditional archival systems are centralized and depend on single entities. BIG-WEB-ARCHIVE moves archiving into a decentralized realm, leveraging Qortal’s blockchain and distributed storage to make archives resilient, censorship-resistant, and verifiable.
 
 📦 Features
 
@@ -44,7 +44,7 @@ The modern web is ephemeral. Pages disappear or change without notice, yet many 
 
 🧩 Architecture
 
-BIG-DIG-DEEP consists of:
+BIG-WEB-ARCHIVE consists of:
 
 * Crawler Subsystem
   * A Python service (using Playwright) that:
@@ -96,10 +96,10 @@ cd qortal
 mvn clean package
 cd ..
 ``` -->
-  * Clone the big-dig-deep repo  
+  * Clone the big-web-archive repo  
 ```
-git clone https://github.com/8bittengeek/big-dig-deep.git
-cd big-dig-deep
+git clone https://github.com/8bittengeek/big-web-archive.git
+cd big-web-archive
 ```
   <!-- * Get the Qortal core
 ```
@@ -123,7 +123,7 @@ API docs: `http://localhost:8000/docs`
 
 ---
 
-📦 BIG-DIG-DEEP Docker Setup Overview
+📦 BIG-WEB-ARCHIVE Docker Setup Overview
 
 This provides a consistent dev environment using containers so you can:
 
@@ -201,7 +201,7 @@ This project is released under the MIT License — see [LICENSE.md](LICENSE.md) 
 
 🪙 Acknowledgements
 
-BIG-DIG-DEEP was inspired by open archival tools and decentralized storage innovations.
+BIG-WEB-ARCHIVE was inspired by open archival tools and decentralized storage innovations.
 
 ---
 
@@ -220,7 +220,7 @@ wiki.qortal.org
 * Q-Apps API: JavaScript-based apps can interact with users and the blockchain through Qortal’s APIs, making it usable with modern front-ends. 
 Qortal
 
-* BIG-DIG-DEEP app consists of a crawler running on backend servers to fetch and snapshot web content, plus a Q-App frontend that interacts with Qortal for storage, retrieval, and distribution.
+* BIG-WEB-ARCHIVE app consists of a crawler running on backend servers to fetch and snapshot web content, plus a Q-App frontend that interacts with Qortal for storage, retrieval, and distribution.
 
 ---
 
@@ -238,11 +238,11 @@ Wikipedia
 
 * ArchiveBox: Open-source tool for self-hosted web archiving and retrieval, can store HTML, JS, PDFs, screenshots, WARC files, media, etc. 
 
-These tools mix crawling logic (download, render, process content) with storage formats (HTML, WARC, screenshots) that BIG-DIG-DEEP needs to model or interface with.
+These tools mix crawling logic (download, render, process content) with storage formats (HTML, WARC, screenshots) that BIG-WEB-ARCHIVE needs to model or interface with.
 
 ---
 
-🛠️ Architecture Outline for BIG-DIG-DEEP
+🛠️ Architecture Outline for BIG-WEB-ARCHIVE
 
 🧱 1. Crawler & Archival Backend
 
@@ -260,13 +260,13 @@ These tools mix crawling logic (download, render, process content) with storage 
 
 * Stores metadata (timestamp, hashes, dependencies)
 
-* This is similar in intent to ArchiveBox but tailored to the needs of BIG-DIG-DEEP.
+* This is similar in intent to ArchiveBox but tailored to the needs of BIG-WEB-ARCHIVE.
 
 ---
 
 📦 2. Chunking & Storage Module
 
-Because Qortal’s Data Network can store encrypted, chunked data, BIG-DIG-DEEP needs:
+Because Qortal’s Data Network can store encrypted, chunked data, BIG-WEB-ARCHIVE needs:
 
 * A component to chunk archived data
 
@@ -292,7 +292,7 @@ Develop a Q-App (JavaScript with a modern UI framework like React or Svelte) tha
 
 * Fetches archived content using QDN’s decentralized fetch APIs
 
-The Q-App would interact with BIG-DIG-DEEP backend (crawler) and Qortal to coordinate storage and retrieval.
+The Q-App would interact with BIG-WEB-ARCHIVE backend (crawler) and Qortal to coordinate storage and retrieval.
 
 ---
 
