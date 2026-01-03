@@ -12,8 +12,10 @@ class ArchiveRequest(BaseModel):
 def queue_archive(req: ArchiveRequest):
     job_id = str(uuid.uuid4())
     jobs[job_id] = {"status": "queued", "url": req.url}
-    subprocess.Popen(["python", "../crawler/crawler.py", req.url])
+    subprocess.Popen(["python", "crawler/crawler.py", req.url])
     jobs[job_id]["status"] = "started"
+    print(jobs[job_id])
+    print(job_id)
     return {"job_id": job_id, "status": "started"}
 
 @app.get("/archive/{job_id}")
